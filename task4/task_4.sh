@@ -11,14 +11,14 @@ echo
 
 #2
 
-#echo "Type in file name:"
-#read fname
-#count=$( wc -w <"$fname")
+echo "Type in file name:"
+read fname
+count=$( wc -w <"$fname")
 #echo $count
 #echo
-#if [ "$count" -gt 20 ]; then
-#  echo Sentence length is "$count" words long
-#fi
+if [ "$count" -gt 20 ]; then
+  echo Sentence length is "$count" words long
+fi
 
 #3
 echo "Enter number of menu you would like to see: \n\t1-Vegeterian \n\t2-Fish \n\t3-Meat"
