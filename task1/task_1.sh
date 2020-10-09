@@ -1,14 +1,14 @@
-// 1
+# 1
 VAR1='some text'
 echo $VAR1
 
 
-// 2
+# 2
 VAR2="Just sentence? I \"don\"'t know how to do it! 'Quotes' Maybe like that%"
 echo $VAR2"
 
 
-// 3
+# 3
 vim taskscript.sh
 
   1 #!/usr/bin/env bash
@@ -24,7 +24,7 @@ chmod 700 taskscript.sh
 
 
 
-// 4
+# 4
 touch new\'file\'
 
 

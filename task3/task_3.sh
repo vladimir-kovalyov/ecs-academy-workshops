@@ -16,6 +16,6 @@ fi
 
 # task 3.2
 # crontab -e
-# 00 12 * * * /Users/vladimir/Desktop/ecs-acam-scripting-workshop/task3/task_3.sh
+# 00 12 * * * ./Users/vladimir/Desktop/ecs-acam-scripting-workshop/task3/task_3.sh
 # :wq
 # crontab -l

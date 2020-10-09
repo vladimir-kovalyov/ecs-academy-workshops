@@ -13,12 +13,14 @@ echo
 
 echo "Type in file name:"
 read fname
-count=$( wc -w <"$fname")
+count=$( wc -w < $fname)
 #echo $count
 #echo
 if [ "$count" -gt 20 ]; then
-  echo Sentence length is "$count" words long
+  echo Sentence length is $count words long
 fi
+echo
+echo
 
 #3
 echo "Enter number of menu you would like to see: \n\t1-Vegeterian \n\t2-Fish \n\t3-Meat"
@@ -38,7 +40,7 @@ esac
 echo
 echo
 
-echo"Who are you: \n\t1-Cowboy \n\t2-StarLord \n\t3-MeatLover"
+echo "Who are you: \n\t1-Cowboy \n\t2-StarLord \n\t3-MeatLover"
 read character
 case $character in
   1 ) username=Cowboy
@@ -54,3 +56,28 @@ echo Hello, how are you doing $username ?
 #5
 echo
 echo
+
+what_time=$(date +"%H")
+
+case $what_time in
+    [5-10]*) 
+      Text="It's morning"
+      ;;
+    [11-13]*) 
+      Text="It's noon"
+      ;;
+    [13-16]*) 
+      Text="It's afternoon"
+      ;;
+    [17-22]*) 
+      Text="It's evening"
+      ;;
+    23|1|2|3|4) 
+      Text="It's night time"
+      ;;
+    *)
+      Text="All is lost"
+      ;;
+esac
+
+echo $Text

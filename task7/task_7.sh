@@ -1,10 +1,14 @@
-#1
+#!/bin/bash
 
+declare -a websites
+echo "Type in websites:"
+read -a websites
 
-words_in_file () {
-  cat $1 | wc -w
-}
+declare -A site_ping
 
-num_of_words=$(words_in_file $1)
+for site in ${sites[@]}
+do
+    site_ping[$site]=$(ping -c 1 $site)
+done
 
-echo "number of words in document:" $num_of_words
+echo ${site_ping[@]}
